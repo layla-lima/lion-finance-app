@@ -34,7 +34,7 @@ namespace lion_finance_app
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
-            button1 = new Button();
+            btnEntrar = new Button();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -85,25 +85,27 @@ namespace lion_finance_app
             label2.TabIndex = 3;
             label2.Text = "Senha:";
             // 
-            // button1
+            // btnEntrar
             // 
-            button1.BackColor = Color.FromArgb(201, 160, 80);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(262, 384);
-            button1.Name = "button1";
-            button1.Size = new Size(291, 28);
-            button1.TabIndex = 5;
-            button1.Text = "Entrar";
-            button1.UseVisualStyleBackColor = false;
+            btnEntrar.BackColor = Color.FromArgb(201, 160, 80);
+            btnEntrar.Cursor = Cursors.Hand;
+            btnEntrar.FlatAppearance.BorderSize = 0;
+            btnEntrar.FlatStyle = FlatStyle.Flat;
+            btnEntrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEntrar.Location = new Point(262, 384);
+            btnEntrar.Name = "btnEntrar";
+            btnEntrar.Size = new Size(291, 28);
+            btnEntrar.TabIndex = 5;
+            btnEntrar.Text = "Entrar";
+            btnEntrar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Cursor = Cursors.Hand;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(353, 441);
+            label3.Location = new Point(354, 433);
             label3.Name = "label3";
             label3.Size = new Size(104, 15);
             label3.TabIndex = 6;
@@ -114,9 +116,9 @@ namespace lion_finance_app
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(17, 17, 17);
-            ClientSize = new Size(800, 504);
+            ClientSize = new Size(800, 496);
             Controls.Add(label3);
-            Controls.Add(button1);
+            Controls.Add(btnEntrar);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);
@@ -144,7 +146,7 @@ namespace lion_finance_app
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
-        private Button button1;
+        private Button btnEntrar;
         private Label label3;
     }
 }
