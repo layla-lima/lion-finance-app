@@ -6,5 +6,12 @@ namespace lion_finance_app
         {
             InitializeComponent();
         }
+
+        private void lblCadastrar_Click(object sender, EventArgs e)
+        {
+            TelaCadastro telaCadastro = new TelaCadastro();
+            telaCadastro.Show();
+            this.Hide();
+        }
     }
 }

@@ -31,11 +31,11 @@ namespace lion_finance_app
         {
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtLogin = new TextBox();
+            txtSenha = new TextBox();
             label2 = new Label();
             btnEntrar = new Button();
-            label3 = new Label();
+            lblCadastrar = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -60,19 +60,19 @@ namespace lion_finance_app
             label1.TabIndex = 1;
             label1.Text = "Login:";
             // 
-            // textBox1
+            // txtLogin
             // 
-            textBox1.Location = new Point(262, 258);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(291, 23);
-            textBox1.TabIndex = 2;
+            txtLogin.Location = new Point(262, 258);
+            txtLogin.Name = "txtLogin";
+            txtLogin.Size = new Size(291, 23);
+            txtLogin.TabIndex = 2;
             // 
-            // textBox2
+            // txtSenha
             // 
-            textBox2.Location = new Point(262, 324);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(291, 23);
-            textBox2.TabIndex = 4;
+            txtSenha.Location = new Point(262, 324);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(291, 23);
+            txtSenha.TabIndex = 4;
             // 
             // label2
             // 
@@ -99,17 +99,18 @@ namespace lion_finance_app
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // lblCadastrar
             // 
-            label3.AutoSize = true;
-            label3.Cursor = Cursors.Hand;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(354, 433);
-            label3.Name = "label3";
-            label3.Size = new Size(104, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Não possui conta?";
+            lblCadastrar.AutoSize = true;
+            lblCadastrar.Cursor = Cursors.Hand;
+            lblCadastrar.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblCadastrar.ForeColor = SystemColors.ButtonFace;
+            lblCadastrar.Location = new Point(354, 433);
+            lblCadastrar.Name = "lblCadastrar";
+            lblCadastrar.Size = new Size(104, 15);
+            lblCadastrar.TabIndex = 6;
+            lblCadastrar.Text = "Não possui conta?";
+            lblCadastrar.Click += lblCadastrar_Click;
             // 
             // TelaLogin
             // 
@@ -117,11 +118,11 @@ namespace lion_finance_app
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(17, 17, 17);
             ClientSize = new Size(800, 496);
-            Controls.Add(label3);
+            Controls.Add(lblCadastrar);
             Controls.Add(btnEntrar);
-            Controls.Add(textBox2);
+            Controls.Add(txtSenha);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtLogin);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             MaximizeBox = false;
@@ -143,10 +144,10 @@ namespace lion_finance_app
 
         private PictureBox pictureBox1;
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtLogin;
+        private TextBox txtSenha;
         private Label label2;
         private Button btnEntrar;
-        private Label label3;
+        private Label lblCadastrar;
     }
 }
