@@ -73,6 +73,7 @@ namespace lion_finance_app
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(291, 23);
             txtSenha.TabIndex = 4;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -98,6 +99,7 @@ namespace lion_finance_app
             btnEntrar.TabIndex = 5;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = false;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // lblCadastrar
             // 

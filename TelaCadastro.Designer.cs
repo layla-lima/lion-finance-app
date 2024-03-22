@@ -45,7 +45,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(190, 69);
+            label1.Location = new Point(183, 57);
             label1.Name = "label1";
             label1.Size = new Size(299, 50);
             label1.TabIndex = 0;
@@ -54,24 +54,24 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(190, 159);
+            label2.Location = new Point(190, 143);
             label2.Name = "label2";
-            label2.Size = new Size(61, 21);
+            label2.Size = new Size(59, 21);
             label2.TabIndex = 1;
             label2.Text = "Nome:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(190, 183);
+            textBox1.Location = new Point(190, 167);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(292, 23);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(190, 247);
+            textBox2.Location = new Point(190, 231);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(292, 23);
             textBox2.TabIndex = 4;
@@ -79,17 +79,17 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(190, 223);
+            label3.Location = new Point(190, 207);
             label3.Name = "label3";
-            label3.Size = new Size(63, 21);
+            label3.Size = new Size(58, 21);
             label3.TabIndex = 3;
             label3.Text = "E-mail:";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(190, 310);
+            textBox3.Location = new Point(190, 294);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(292, 23);
             textBox3.TabIndex = 6;
@@ -98,11 +98,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(190, 286);
+            label4.Location = new Point(190, 270);
             label4.Name = "label4";
-            label4.Size = new Size(61, 21);
+            label4.Size = new Size(58, 21);
             label4.TabIndex = 5;
             label4.Text = "Senha:";
             // 
@@ -118,10 +118,11 @@
             btnCriarConta.TabIndex = 7;
             btnCriarConta.Text = "Criar Conta";
             btnCriarConta.UseVisualStyleBackColor = false;
+            btnCriarConta.Click += btnCriarConta_Click;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(190, 371);
+            textBox4.Location = new Point(190, 355);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(292, 23);
             textBox4.TabIndex = 9;
@@ -130,11 +131,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(190, 347);
+            label5.Location = new Point(190, 331);
             label5.Name = "label5";
-            label5.Size = new Size(142, 21);
+            label5.Size = new Size(135, 21);
             label5.TabIndex = 8;
             label5.Text = "Confirmar Senha:";
             // 

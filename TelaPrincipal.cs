@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace lion_finance_app
 {
-    public partial class TelaCadastro : Form
+    public partial class TelaPrincipal : Form
     {
-        public TelaCadastro()
+        public TelaPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void btnCriarConta_Click(object sender, EventArgs e)
-        {
-            TelaLogin telaLogin = new TelaLogin();
-            telaLogin.Show();
-            this.Hide();
         }
     }
 }
