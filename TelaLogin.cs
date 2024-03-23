@@ -1,14 +1,14 @@
 using System;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace lion_finance_app
 {
     public partial class TelaLogin : Form
     {
-        // ref da conexao:
-        SqlConnection Conexao = new SqlConnection(@"Data Source=DESKTOP-M2PRVUH; integrated security=SSPI;initial catalog=LionFinance");
+        // string de conexão para o banco de dados Access
+        string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\Database\LionFinance.mdb";
 
         public TelaLogin()
         {
@@ -22,26 +22,41 @@ namespace lion_finance_app
             this.Hide();
         }
 
-        // button click - evento clicar
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Conexao.Open(); // abrir conexão com o database
-            string query = "SELECT * FROM Usuarios WHERE Nome = '" + txtLogin.Text + "' AND Senha = '" + txtSenha.Text + "'";
-            SqlDataAdapter dp = new SqlDataAdapter(query,Conexao);
-            DataTable dt = new DataTable();
-            dp.Fill(dt);
-
-            if(dt.Rows.Count == 1)
+            try
             {
-                TelaPrincipal principal = new TelaPrincipal();
-                this.Hide();
-                principal.Show();
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou Senha Incorreto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                // Abrir conexão com o banco de dados Access
+                OleDbConnection conn = new OleDbConnection(stringcon);
+                conn.Open();
 
+                // Consultar o banco de dados Access
+                string query = "SELECT * FROM Usuarios WHERE Nome = @Nome AND Senha = @Senha";
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Nome", txtLogin.Text);
+                cmd.Parameters.AddWithValue("@Senha", txtSenha.Text);
+
+                OleDbDataAdapter dp = new OleDbDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                dp.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+                    TelaPrincipal principal = new TelaPrincipal();
+                    this.Hide();
+                    principal.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou Senha Incorreto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                conn.Close(); // Fechar conexão com o banco de dados Access
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
         }
     }
 }

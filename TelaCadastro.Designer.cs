@@ -30,13 +30,13 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtNome = new TextBox();
+            txtEmail = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtSenha = new TextBox();
             label4 = new Label();
             btnCriarConta = new Button();
-            textBox4 = new TextBox();
+            txtConfSenha = new TextBox();
             label5 = new Label();
             SuspendLayout();
             // 
@@ -62,19 +62,19 @@
             label2.TabIndex = 1;
             label2.Text = "Nome:";
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(190, 167);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 23);
-            textBox1.TabIndex = 2;
+            txtNome.Location = new Point(190, 167);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(292, 23);
+            txtNome.TabIndex = 2;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(190, 231);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(292, 23);
-            textBox2.TabIndex = 4;
+            txtEmail.Location = new Point(190, 231);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(292, 23);
+            txtEmail.TabIndex = 4;
             // 
             // label3
             // 
@@ -87,13 +87,13 @@
             label3.TabIndex = 3;
             label3.Text = "E-mail:";
             // 
-            // textBox3
+            // txtSenha
             // 
-            textBox3.Location = new Point(190, 294);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(292, 23);
-            textBox3.TabIndex = 6;
-            textBox3.UseSystemPasswordChar = true;
+            txtSenha.Location = new Point(190, 294);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(292, 23);
+            txtSenha.TabIndex = 6;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -120,13 +120,13 @@
             btnCriarConta.UseVisualStyleBackColor = false;
             btnCriarConta.Click += btnCriarConta_Click;
             // 
-            // textBox4
+            // txtConfSenha
             // 
-            textBox4.Location = new Point(190, 355);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(292, 23);
-            textBox4.TabIndex = 9;
-            textBox4.UseSystemPasswordChar = true;
+            txtConfSenha.Location = new Point(190, 355);
+            txtConfSenha.Name = "txtConfSenha";
+            txtConfSenha.Size = new Size(292, 23);
+            txtConfSenha.TabIndex = 9;
+            txtConfSenha.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -145,19 +145,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(17, 17, 17);
             ClientSize = new Size(679, 506);
-            Controls.Add(textBox4);
+            Controls.Add(txtConfSenha);
             Controls.Add(label5);
             Controls.Add(btnCriarConta);
-            Controls.Add(textBox3);
+            Controls.Add(txtSenha);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(txtEmail);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(txtNome);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "TelaCadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaCadastro";
+            Load += TelaCadastro_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,13 +167,13 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtNome;
+        private TextBox txtEmail;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtSenha;
         private Label label4;
         private Button btnCriarConta;
-        private TextBox textBox4;
+        private TextBox txtConfSenha;
         private Label label5;
     }
 }
