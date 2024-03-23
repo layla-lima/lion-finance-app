@@ -1,12 +1,17 @@
 # lion-finance-app
  Aplicativo de finanças que cria relatórios e estatísticas baseado nos gastos e lucros pessoais.
 
+## Requisitos
+- Visual Studio Community
+- SQL Server
+- SQL Server Management
+
 ## Andamento do Projeto
 
 - Tela de Login: <i>Concluído</i>
 - Tela de Cadastro: <i>Concluído</i>
 - Tela Principal: <i>Em andamento</i>
-
+- Conexão com Banco de Dados SQL Server: <i>Concluído</i>
 
 ## Tela Login
 
