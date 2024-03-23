@@ -3,8 +3,15 @@
 
 ## Requisitos
 - Visual Studio Community
-- SQL Server
-- SQL Server Management
+- Access
+  <br>
+  <br>
+### ATENÇÃO
+Para que o aplicativo funcione corretamente, é <strong>obrigatório</strong> conectar o banco de dados do Access (arquivo LionFinance.mdb da pasta Database Access) ao Visual Studio Community: <br>
+- Com o projejo aberto no Visual Studio Community, clique na aba superior Ferramentas > Conectar-se a Banco de Dados > Em "fonte de dados" utilizar o Arquivo Access > em "Nome do arquivo de banco de dados" clicar em "Procurar" e selecionar o arquivo LionFinance.mdb > Clicar em "Testar Conexão".
+- Se a conexão for bem sucedida, clique em Avançado, copie a linha "Provider=Microsoft[...]" inteira e clique em OK nas duas telas. <br>
+- Após o processo, colar o caminho do arquivo .mdb (Provider=Microsoft[...]) no código da TelaLogin(linha 11) e TelaCadastro (linha 18).
+ 
 
 ## Andamento do Projeto
 
