@@ -13,7 +13,7 @@ Para que o aplicativo funcione corretamente, é <strong>obrigatório</strong> co
 - Se a conexão for bem sucedida, clique em Avançado, copie a linha "Provider=Microsoft[...]" inteira e clique em OK nas duas telas. 
 - Após o processo, colar o caminho do arquivo .mdb (Provider=Microsoft[...]) no código da TelaLogin(linha 11) e TelaCadastro (linha 18).
 <br>
-<i>Observação: Devido a questões de segurança, o arquivo do banco de dados LionFinance.mdb não pode ser armazenado diretamente no GitHub. Se quiser contribuir com o código e ter acesso ao arquivo, entre em contato comigo para obte-lo.
+<i>Observação: Devido a questões de segurança, o arquivo do banco de dados LionFinance.mdb não pode ser armazenado diretamente no GitHub. Por conta disso, o arquivo está disponível no Google Drive, para baixa-lo <a href="https://drive.google.com/file/d/10dK8PchbxFiKlULFZ4a4mJzYJ9SAugOQ/view?usp=drive_link">clique aqui</a>.
 
 ## Andamento do Projeto
 
