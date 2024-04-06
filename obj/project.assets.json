@@ -766,11 +766,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
+      "projectUniqueName": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
       "projectName": "lion-finance-app",
-      "projectPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
+      "projectPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
       "packagesPath": "C:\\Users\\Layla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\obj\\",
+      "outputPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Layla\\AppData\\Roaming\\NuGet\\NuGet.Config",
