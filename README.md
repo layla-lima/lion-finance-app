@@ -1,5 +1,5 @@
-# lion-finance-app
- Aplicativo de finanças que cria relatórios e estatísticas baseado nos gastos e lucros pessoais.
+# Lion Finance
+ Aplicativo de finanças que cria relatórios e estatísticas baseado nos gastos e lucros pessoais. 
 
 ## Requisitos
 - Visual Studio Community
@@ -8,19 +8,16 @@
   <br>
   <br>
 ### ATENÇÃO
-Para que o aplicativo funcione corretamente, é <strong>obrigatório</strong> conectar o banco de dados do Access (arquivo LionFinance.mdb) ao Visual Studio Community: 
-- Com o projeto aberto no Visual Studio Community, clique na aba superior Ferramentas > Conectar-se a Banco de Dados > Em "fonte de dados" selecionar a opção Arquivo Access > em "Nome do arquivo de banco de dados" clicar em "Procurar" e selecionar o arquivo LionFinance.mdb > Clicar em "Testar Conexão".
-- Se a conexão for bem sucedida, clique em Avançado, copie a linha "Provider=Microsoft[...]" inteira e clique em OK nas duas telas. 
-- Após o processo, colar o caminho do arquivo .mdb (Provider=Microsoft[...]) no código da TelaLogin(linha 11) e TelaCadastro (linha 18).
-<br>
-<i>Observação: Devido a questões de segurança, o arquivo do banco de dados LionFinance.mdb não pode ser armazenado diretamente no GitHub. Se quiser contribuir com o código e ter acesso ao arquivo, entre em contato comigo para obte-lo.
+Para que o aplicativo funcione corretamente, é <strong>obrigatório</strong> conectar o banco de dados do Access (arquivo LionFinance.mdb) ao Visual Studio Community.
+
 
 ## Andamento do Projeto
 
 - Tela de Login: <i>Concluído</i>
 - Tela de Cadastro: <i>Concluído</i>
+- Conexão com Banco de Dados: <i>Concluído</i>
 - Tela Principal: <i>Em andamento</i>
-- Conexão com Banco de Dados SQL Server: <i>Concluído</i>
+
 
 ## Tela Login
 
@@ -32,4 +29,10 @@ Para que o aplicativo funcione corretamente, é <strong>obrigatório</strong> co
 
 ## Tela Principal
 <i>Em andamento</i>
+
+## Documentação do Projeto
+
+- <a href="https://lucid.app/lucidspark/365bd1e4-cd10-442f-b325-2a99d120d872/edit?invitationId=inv_8510dfda-c8c7-480d-976b-a89897cbfa18">Lion Finance - Mapa Mental</a>
+- <a href="https://lucid.app/lucidchart/455e0c4c-28c2-4268-ba79-b21a2a8bac3f/edit?viewport_loc=-2963%2C988%2C13875%2C6288%2CuDe-dIt-NWfS&invitationId=inv_fc7689cf-7861-45cc-aea0-558b9c9ea124">Lion Finance - Levantamento de Requisitos e StoryBoard</a>
+
 
