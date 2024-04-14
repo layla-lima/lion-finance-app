@@ -50,11 +50,11 @@
             lblTransp = new Label();
             txtTransp = new TextBox();
             lblRecebimentoFixo = new Label();
-            textBox1 = new TextBox();
+            txtRendaFixa = new TextBox();
             button1 = new Button();
             button2 = new Button();
             lblRecebimentoVariavel = new Label();
-            textBox2 = new TextBox();
+            txtRendaVari = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -268,14 +268,14 @@
             lblRecebimentoFixo.Text = "Rendimento fixo:";
             lblRecebimentoFixo.Click += lblSalario_Click;
             // 
-            // textBox1
+            // txtRendaFixa
             // 
-            textBox1.Location = new Point(758, 421);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(144, 27);
-            textBox1.TabIndex = 20;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtRendaFixa.Location = new Point(758, 421);
+            txtRendaFixa.Margin = new Padding(3, 4, 3, 4);
+            txtRendaFixa.Name = "txtRendaFixa";
+            txtRendaFixa.Size = new Size(144, 27);
+            txtRendaFixa.TabIndex = 20;
+            txtRendaFixa.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -286,6 +286,7 @@
             button1.TabIndex = 21;
             button1.Text = "Inserir";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -310,14 +311,14 @@
             lblRecebimentoVariavel.Text = "Rendimento variavel:";
             lblRecebimentoVariavel.Click += label1_Click_1;
             // 
-            // textBox2
+            // txtRendaVari
             // 
-            textBox2.Location = new Point(758, 465);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(144, 27);
-            textBox2.TabIndex = 24;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtRendaVari.Location = new Point(758, 465);
+            txtRendaVari.Margin = new Padding(3, 4, 3, 4);
+            txtRendaVari.Name = "txtRendaVari";
+            txtRendaVari.Size = new Size(144, 27);
+            txtRendaVari.TabIndex = 24;
+            txtRendaVari.TextChanged += textBox2_TextChanged;
             // 
             // TelaCadastroFinanceiro
             // 
@@ -325,11 +326,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 28, 28);
             ClientSize = new Size(914, 658);
-            Controls.Add(textBox2);
+            Controls.Add(txtRendaVari);
             Controls.Add(lblRecebimentoVariavel);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(txtRendaFixa);
             Controls.Add(lblRecebimentoFixo);
             Controls.Add(txtTransp);
             Controls.Add(lblTransp);
@@ -381,10 +382,10 @@
         private Label lblTransp;
         private TextBox txtTransp;
         private Label lblRecebimentoFixo;
-        private TextBox textBox1;
+        private TextBox txtRendaFixa;
         private Button button1;
         private Button button2;
         private Label lblRecebimentoVariavel;
-        private TextBox textBox2;
+        private TextBox txtRendaVari;
     }
 }
