@@ -51,8 +51,7 @@
             txtTransp = new TextBox();
             lblRecebimentoFixo = new Label();
             txtRendaFixa = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnProximo = new Button();
             lblRecebimentoVariavel = new Label();
             txtRendaVari = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,48 +62,42 @@
             lblControl.AutoSize = true;
             lblControl.Font = new Font("Broadway", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblControl.ForeColor = Color.White;
-            lblControl.Location = new Point(24, 33);
+            lblControl.Location = new Point(21, 25);
             lblControl.Name = "lblControl";
-            lblControl.Size = new Size(571, 53);
+            lblControl.Size = new Size(469, 43);
             lblControl.TabIndex = 0;
             lblControl.Text = "Controle de Despesas";
-            
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.FromArgb(30, 28, 28);
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(601, 52);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(526, 39);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(288, 230);
+            pictureBox1.Size = new Size(252, 173);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            
             // 
             // lblFixos
             // 
             lblFixos.AutoSize = true;
             lblFixos.Font = new Font("Arial Black", 13F, FontStyle.Bold);
             lblFixos.ForeColor = Color.White;
-            lblFixos.Location = new Point(43, 127);
+            lblFixos.Location = new Point(38, 95);
             lblFixos.Name = "lblFixos";
-            lblFixos.Size = new Size(195, 31);
+            lblFixos.Size = new Size(160, 26);
             lblFixos.TabIndex = 2;
             lblFixos.Text = "GASTOS FIXOS";
-            
             // 
             // lblVari
             // 
             lblVari.AutoSize = true;
             lblVari.Font = new Font("Arial Black", 13F, FontStyle.Bold);
             lblVari.ForeColor = Color.White;
-            lblVari.Location = new Point(43, 374);
+            lblVari.Location = new Point(38, 280);
             lblVari.Name = "lblVari";
-            lblVari.Size = new Size(255, 31);
+            lblVari.Size = new Size(209, 26);
             lblVari.TabIndex = 3;
             lblVari.Text = "GASTOS VARIÁVEIS";
             // 
@@ -113,21 +106,20 @@
             lblRec.AutoSize = true;
             lblRec.Font = new Font("Arial Black", 13F, FontStyle.Bold);
             lblRec.ForeColor = Color.White;
-            lblRec.Location = new Point(549, 374);
+            lblRec.Location = new Point(480, 280);
             lblRec.Name = "lblRec";
-            lblRec.Size = new Size(210, 31);
+            lblRec.Size = new Size(172, 26);
             lblRec.TabIndex = 4;
             lblRec.Text = "RECEBIMENTOS";
-            
             // 
             // lblFinan
             // 
             lblFinan.AutoSize = true;
             lblFinan.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblFinan.ForeColor = Color.White;
-            lblFinan.Location = new Point(43, 192);
+            lblFinan.Location = new Point(38, 144);
             lblFinan.Name = "lblFinan";
-            lblFinan.Size = new Size(162, 24);
+            lblFinan.Size = new Size(128, 18);
             lblFinan.TabIndex = 5;
             lblFinan.Text = "Financiamentos:";
             // 
@@ -136,21 +128,20 @@
             lblContas.AutoSize = true;
             lblContas.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblContas.ForeColor = Color.White;
-            lblContas.Location = new Point(43, 239);
+            lblContas.Location = new Point(38, 179);
             lblContas.Name = "lblContas";
-            lblContas.Size = new Size(219, 24);
+            lblContas.Size = new Size(170, 18);
             lblContas.TabIndex = 6;
             lblContas.Text = "Contas (Luz, Internet):";
-            
             // 
             // lblParcela
             // 
             lblParcela.AutoSize = true;
             lblParcela.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblParcela.ForeColor = Color.White;
-            lblParcela.Location = new Point(43, 277);
+            lblParcela.Location = new Point(38, 208);
             lblParcela.Name = "lblParcela";
-            lblParcela.Size = new Size(154, 24);
+            lblParcela.Size = new Size(121, 18);
             lblParcela.TabIndex = 7;
             lblParcela.Text = "Parcelamentos:";
             // 
@@ -159,29 +150,27 @@
             lblAluguel.AutoSize = true;
             lblAluguel.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblAluguel.ForeColor = Color.White;
-            lblAluguel.Location = new Point(43, 318);
+            lblAluguel.Location = new Point(38, 238);
             lblAluguel.Name = "lblAluguel";
-            lblAluguel.Size = new Size(156, 24);
+            lblAluguel.Size = new Size(121, 18);
             lblAluguel.TabIndex = 8;
             lblAluguel.Text = "Aluguel Mensal:";
             // 
             // txtFinanc
             // 
-            txtFinanc.Location = new Point(290, 191);
-            txtFinanc.Margin = new Padding(3, 4, 3, 4);
+            txtFinanc.Location = new Point(254, 143);
             txtFinanc.Name = "txtFinanc";
-            txtFinanc.Size = new Size(174, 27);
+            txtFinanc.Size = new Size(153, 23);
             txtFinanc.TabIndex = 9;
-            
             // 
             // lblCompras
             // 
             lblCompras.AutoSize = true;
             lblCompras.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblCompras.ForeColor = Color.White;
-            lblCompras.Location = new Point(45, 421);
+            lblCompras.Location = new Point(39, 316);
             lblCompras.Name = "lblCompras";
-            lblCompras.Size = new Size(168, 24);
+            lblCompras.Size = new Size(131, 18);
             lblCompras.TabIndex = 10;
             lblCompras.Text = "Compras do Mês:";
             // 
@@ -190,51 +179,45 @@
             lblLazer.AutoSize = true;
             lblLazer.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblLazer.ForeColor = Color.White;
-            lblLazer.Location = new Point(45, 465);
+            lblLazer.Location = new Point(39, 349);
             lblLazer.Name = "lblLazer";
-            lblLazer.Size = new Size(67, 24);
+            lblLazer.Size = new Size(53, 18);
             lblLazer.TabIndex = 11;
             lblLazer.Text = "Lazer:";
             // 
             // txtConta
             // 
-            txtConta.Location = new Point(290, 236);
-            txtConta.Margin = new Padding(3, 4, 3, 4);
+            txtConta.Location = new Point(254, 177);
             txtConta.Name = "txtConta";
-            txtConta.Size = new Size(174, 27);
+            txtConta.Size = new Size(153, 23);
             txtConta.TabIndex = 12;
-            
             // 
             // txtParc
             // 
-            txtParc.Location = new Point(290, 274);
-            txtParc.Margin = new Padding(3, 4, 3, 4);
+            txtParc.Location = new Point(254, 206);
             txtParc.Name = "txtParc";
-            txtParc.Size = new Size(174, 27);
+            txtParc.Size = new Size(153, 23);
             txtParc.TabIndex = 13;
             // 
             // txtAluguel
             // 
-            txtAluguel.Location = new Point(290, 317);
-            txtAluguel.Margin = new Padding(3, 4, 3, 4);
+            txtAluguel.Location = new Point(254, 238);
             txtAluguel.Name = "txtAluguel";
-            txtAluguel.Size = new Size(174, 27);
+            txtAluguel.Size = new Size(153, 23);
             txtAluguel.TabIndex = 14;
             // 
             // txtCompra
             // 
-            txtCompra.Location = new Point(290, 418);
-            txtCompra.Margin = new Padding(3, 4, 3, 4);
+            txtCompra.Location = new Point(254, 314);
             txtCompra.Name = "txtCompra";
-            txtCompra.Size = new Size(174, 27);
+            txtCompra.Size = new Size(153, 23);
             txtCompra.TabIndex = 15;
             // 
             // txtLazer
             // 
-            txtLazer.Location = new Point(290, 462);
-            txtLazer.Margin = new Padding(3, 4, 3, 4);
+            txtLazer.Location = new Point(254, 346);
             txtLazer.Name = "txtLazer";
-            txtLazer.Size = new Size(174, 27);
+            txtLazer.Size = new Size(153, 23);
             txtLazer.TabIndex = 16;
             // 
             // lblTransp
@@ -242,18 +225,17 @@
             lblTransp.AutoSize = true;
             lblTransp.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblTransp.ForeColor = Color.White;
-            lblTransp.Location = new Point(45, 504);
+            lblTransp.Location = new Point(39, 378);
             lblTransp.Name = "lblTransp";
-            lblTransp.Size = new Size(117, 24);
+            lblTransp.Size = new Size(92, 18);
             lblTransp.TabIndex = 17;
             lblTransp.Text = "Transporte:";
             // 
             // txtTransp
             // 
-            txtTransp.Location = new Point(290, 501);
-            txtTransp.Margin = new Padding(3, 4, 3, 4);
+            txtTransp.Location = new Point(254, 376);
             txtTransp.Name = "txtTransp";
-            txtTransp.Size = new Size(174, 27);
+            txtTransp.Size = new Size(153, 23);
             txtTransp.TabIndex = 18;
             // 
             // lblRecebimentoFixo
@@ -261,75 +243,56 @@
             lblRecebimentoFixo.AutoSize = true;
             lblRecebimentoFixo.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblRecebimentoFixo.ForeColor = Color.White;
-            lblRecebimentoFixo.Location = new Point(549, 423);
+            lblRecebimentoFixo.Location = new Point(480, 317);
             lblRecebimentoFixo.Name = "lblRecebimentoFixo";
-            lblRecebimentoFixo.Size = new Size(167, 24);
+            lblRecebimentoFixo.Size = new Size(130, 18);
             lblRecebimentoFixo.TabIndex = 19;
             lblRecebimentoFixo.Text = "Rendimento fixo:";
-            
             // 
             // txtRendaFixa
             // 
-            txtRendaFixa.Location = new Point(758, 421);
-            txtRendaFixa.Margin = new Padding(3, 4, 3, 4);
+            txtRendaFixa.Location = new Point(663, 316);
             txtRendaFixa.Name = "txtRendaFixa";
-            txtRendaFixa.Size = new Size(144, 27);
+            txtRendaFixa.Size = new Size(126, 23);
             txtRendaFixa.TabIndex = 20;
-            
             // 
-            // button1
+            // btnProximo
             // 
-            button1.Location = new Point(633, 594);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(121, 33);
-            button1.TabIndex = 21;
-            button1.Text = "Inserir";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(781, 594);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(121, 33);
-            button2.TabIndex = 22;
-            button2.Text = "Limpar";
-            button2.UseVisualStyleBackColor = true;
-            
+            btnProximo.Location = new Point(672, 444);
+            btnProximo.Name = "btnProximo";
+            btnProximo.Size = new Size(106, 25);
+            btnProximo.TabIndex = 21;
+            btnProximo.Text = "Proximo";
+            btnProximo.UseVisualStyleBackColor = true;
+            btnProximo.Click += btnProximo_Click;
             // 
             // lblRecebimentoVariavel
             // 
             lblRecebimentoVariavel.AutoSize = true;
             lblRecebimentoVariavel.Font = new Font("Arial Black", 9.75F, FontStyle.Bold);
             lblRecebimentoVariavel.ForeColor = Color.White;
-            lblRecebimentoVariavel.Location = new Point(549, 469);
+            lblRecebimentoVariavel.Location = new Point(480, 352);
             lblRecebimentoVariavel.Name = "lblRecebimentoVariavel";
-            lblRecebimentoVariavel.Size = new Size(205, 24);
+            lblRecebimentoVariavel.Size = new Size(160, 18);
             lblRecebimentoVariavel.TabIndex = 23;
             lblRecebimentoVariavel.Text = "Rendimento variavel:";
-            
             // 
             // txtRendaVari
             // 
-            txtRendaVari.Location = new Point(758, 465);
-            txtRendaVari.Margin = new Padding(3, 4, 3, 4);
+            txtRendaVari.Location = new Point(663, 349);
             txtRendaVari.Name = "txtRendaVari";
-            txtRendaVari.Size = new Size(144, 27);
+            txtRendaVari.Size = new Size(126, 23);
             txtRendaVari.TabIndex = 24;
-            
             // 
             // TelaCadastroFinanceiro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(30, 28, 28);
-            ClientSize = new Size(914, 658);
+            BackColor = Color.FromArgb(17, 17, 17);
+            ClientSize = new Size(800, 494);
             Controls.Add(txtRendaVari);
             Controls.Add(lblRecebimentoVariavel);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnProximo);
             Controls.Add(txtRendaFixa);
             Controls.Add(lblRecebimentoFixo);
             Controls.Add(txtTransp);
@@ -351,10 +314,9 @@
             Controls.Add(lblFixos);
             Controls.Add(pictureBox1);
             Controls.Add(lblControl);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "TelaCadastroFinanceiro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormDados";
-            
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -383,8 +345,7 @@
         private TextBox txtTransp;
         private Label lblRecebimentoFixo;
         private TextBox txtRendaFixa;
-        private Button button1;
-        private Button button2;
+        private Button btnProximo;
         private Label lblRecebimentoVariavel;
         private TextBox txtRendaVari;
     }

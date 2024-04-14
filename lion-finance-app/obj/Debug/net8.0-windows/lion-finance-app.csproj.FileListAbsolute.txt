@@ -40,7 +40,6 @@ C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion_finance_app.TelaCadastro.resources
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion_finance_app.TelaCadastroFinanceiro.resources
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion_finance_app.TelaLogin.resources
-C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion_finance_app.TelaPrincipal.resources
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion-finance-app.csproj.GenerateResource.cache
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion-finance-app.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion-finance-app.AssemblyInfoInputs.cache
@@ -74,3 +73,4 @@ C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion-finance-app.pdb
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion-finance-app.genruntimeconfig.cache
 C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\ref\lion-finance-app.dll
+C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\obj\Debug\net8.0-windows\lion_finance_app.TelaRelatorio.resources
