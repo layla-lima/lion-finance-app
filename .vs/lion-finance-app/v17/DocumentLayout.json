@@ -1,12 +1,87 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|c:\\users\\layla\\documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|c:\\users\\layla\\documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastrofinanceiro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastrofinanceiro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|c:\\users\\layla\\documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|c:\\users\\layla\\documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TelaCadastroFinanceiro.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.Designer.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaCadastroFinanceiro.Designer.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.Designer.cs*",
+              "RelativeToolTip": "lion-finance-app\\TelaCadastroFinanceiro.Designer.cs*",
+              "ViewState": "AQIAAFkBAAAAAAAAAIAwwGQBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:49:29.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TelaCadastroFinanceiro.cs",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaCadastroFinanceiro.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs*",
+              "RelativeToolTip": "lion-finance-app\\TelaCadastroFinanceiro.cs*",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:48:19.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelaLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaLogin.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaLogin.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaLogin.cs*",
+              "RelativeToolTip": "lion-finance-app\\TelaLogin.cs*",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:43:37.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TelaCadastroFinanceiro.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaCadastroFinanceiro.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs [Projeto]*",
+              "RelativeToolTip": "lion-finance-app\\TelaCadastroFinanceiro.cs [Projeto]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:39:14.329Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

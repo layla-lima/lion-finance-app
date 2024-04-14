@@ -68,7 +68,7 @@
             lblControl.Size = new Size(571, 53);
             lblControl.TabIndex = 0;
             lblControl.Text = "Controle de Despesas";
-            lblControl.Click += label1_Click;
+            
             // 
             // pictureBox1
             // 
@@ -83,7 +83,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            
             // 
             // lblFixos
             // 
@@ -95,7 +95,7 @@
             lblFixos.Size = new Size(195, 31);
             lblFixos.TabIndex = 2;
             lblFixos.Text = "GASTOS FIXOS";
-            lblFixos.Click += lblFixos_Click;
+            
             // 
             // lblVari
             // 
@@ -118,7 +118,7 @@
             lblRec.Size = new Size(210, 31);
             lblRec.TabIndex = 4;
             lblRec.Text = "RECEBIMENTOS";
-            lblRec.Click += label4_Click;
+            
             // 
             // lblFinan
             // 
@@ -141,7 +141,7 @@
             lblContas.Size = new Size(219, 24);
             lblContas.TabIndex = 6;
             lblContas.Text = "Contas (Luz, Internet):";
-            lblContas.Click += lblContas_Click;
+            
             // 
             // lblParcela
             // 
@@ -172,7 +172,7 @@
             txtFinanc.Name = "txtFinanc";
             txtFinanc.Size = new Size(174, 27);
             txtFinanc.TabIndex = 9;
-            txtFinanc.TextChanged += txtFinanc_TextChanged;
+            
             // 
             // lblCompras
             // 
@@ -203,7 +203,7 @@
             txtConta.Name = "txtConta";
             txtConta.Size = new Size(174, 27);
             txtConta.TabIndex = 12;
-            txtConta.TextChanged += txtConta_TextChanged;
+            
             // 
             // txtParc
             // 
@@ -266,7 +266,7 @@
             lblRecebimentoFixo.Size = new Size(167, 24);
             lblRecebimentoFixo.TabIndex = 19;
             lblRecebimentoFixo.Text = "Rendimento fixo:";
-            lblRecebimentoFixo.Click += lblSalario_Click;
+            
             // 
             // txtRendaFixa
             // 
@@ -275,7 +275,7 @@
             txtRendaFixa.Name = "txtRendaFixa";
             txtRendaFixa.Size = new Size(144, 27);
             txtRendaFixa.TabIndex = 20;
-            txtRendaFixa.TextChanged += textBox1_TextChanged;
+            
             // 
             // button1
             // 
@@ -297,7 +297,7 @@
             button2.TabIndex = 22;
             button2.Text = "Limpar";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            
             // 
             // lblRecebimentoVariavel
             // 
@@ -309,7 +309,7 @@
             lblRecebimentoVariavel.Size = new Size(205, 24);
             lblRecebimentoVariavel.TabIndex = 23;
             lblRecebimentoVariavel.Text = "Rendimento variavel:";
-            lblRecebimentoVariavel.Click += label1_Click_1;
+            
             // 
             // txtRendaVari
             // 
@@ -318,7 +318,7 @@
             txtRendaVari.Name = "txtRendaVari";
             txtRendaVari.Size = new Size(144, 27);
             txtRendaVari.TabIndex = 24;
-            txtRendaVari.TextChanged += textBox2_TextChanged;
+            
             // 
             // TelaCadastroFinanceiro
             // 
@@ -354,7 +354,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "TelaCadastroFinanceiro";
             Text = "FormDados";
-            Load += Form1_Load;
+            
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

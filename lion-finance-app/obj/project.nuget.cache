@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "adkvs0gc+BxZ/1kLu3VSD7GwXFiubGOgPLc3QMOdPA1UdtxQ6THTUFTw8Y3ylsG84B8r0AFYU7zoSCMt10hG6A==",
+  "dgSpecHash": "TslJDk5/v1XYfhzysdI5R1QGyIuMGLzJY429WyWL28yXrwgtn090WrKj39V8ufKClfBL0sEEclA7rFM3z6m0XQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
+  "projectFilePath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Layla\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Layla\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Layla\\.nuget\\packages\\oxyplot.core\\2.1.2\\oxyplot.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\Layla\\.nuget\\packages\\oxyplot.windowsforms\\2.1.2\\oxyplot.windowsforms.2.1.2.nupkg.sha512",
     "C:\\Users\\Layla\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\Layla\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Layla\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
