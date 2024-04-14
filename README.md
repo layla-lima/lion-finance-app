@@ -16,7 +16,8 @@ Para que o aplicativo funcione corretamente, é <strong>obrigatório</strong> co
 - Tela de Login: <i>Concluído</i>
 - Tela de Cadastro: <i>Concluído</i>
 - Conexão com Banco de Dados: <i>Concluído</i>
-- Tela Principal: <i>Em andamento</i>
+- Tela Cadastro Financeiro: <i>Concluído</i>
+- Tela Relatório: <i>Em andamento</i>
 
 
 ## Tela Login
@@ -27,9 +28,13 @@ Para que o aplicativo funcione corretamente, é <strong>obrigatório</strong> co
 
 ![telaCadastro](https://github.com/layla-lima/lion-finance-app/assets/129623575/c52d009b-3d4d-48b6-98d9-4bee471141f4)
 
-## Tela Principal - Controle de Despesas
+## Tela Controle de Despesas
 
 ![telaDespesas](https://github.com/layla-lima/lion-finance-app/assets/129623575/7bb91f1c-1458-4d66-8890-b3d5a56a2644)
+
+## Tela Relatório
+
+Em andamento
 
 ## Documentação do Projeto
 

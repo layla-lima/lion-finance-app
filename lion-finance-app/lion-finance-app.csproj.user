@@ -10,7 +10,7 @@
     <Compile Update="TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TelaPrincipal.cs">
+    <Compile Update="TelaRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

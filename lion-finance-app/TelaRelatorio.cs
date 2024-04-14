@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace lion_finance_app
 {
-    public partial class TelaPrincipal : Form
+    public partial class TelaRelatorio : Form
     {
-        public TelaPrincipal()
+        public TelaRelatorio()
         {
             InitializeComponent();
         }

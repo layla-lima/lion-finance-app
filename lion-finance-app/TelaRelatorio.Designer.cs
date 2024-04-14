@@ -1,6 +1,6 @@
 ﻿namespace lion_finance_app
 {
-    partial class TelaPrincipal
+    partial class TelaRelatorio
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             SuspendLayout();
             // 
-            // TelaPrincipal
+            // TelaRelatorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 275);
-            Name = "TelaPrincipal";
-            Text = "TelaPrincipal";
+            ClientSize = new Size(800, 450);
+            Name = "TelaRelatorio";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "TelaRelatorio";
             ResumeLayout(false);
         }
 

@@ -12,77 +12,13 @@ namespace lion_finance_app
             this.TxtNome = txtNome;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblContas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtConta_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSalario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFinanc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFixos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnProximo_Click(object sender, EventArgs e)
         {
             try
             {
                 // Abrir conexão com o banco de dados Access
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\nikol\OneDrive\Documentos\projetos\unip\lion-finance-app\lion-finance-app\LionFinance.mdb";
+                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
                 OleDbConnection conn = new OleDbConnection(stringcon);
                 conn.Open();
 
@@ -106,16 +42,9 @@ namespace lion_finance_app
 
                 MessageBox.Show("Finanças salvas com sucesso!");
 
-
-                txtFinanc.Clear();
-                txtConta.Clear();
-                txtParc.Clear();
-                txtAluguel.Clear();
-                txtCompra.Clear();
-                txtLazer.Clear();
-                txtTransp.Clear();
-                txtRendaFixa.Clear();
-                txtRendaVari.Clear();
+                TelaRelatorio telaRelatorio = new TelaRelatorio();
+                telaRelatorio.Show();
+                this.Close();
 
                 conn.Close();
 

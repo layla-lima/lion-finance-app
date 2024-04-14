@@ -42,9 +42,9 @@ namespace lion_finance_app
 
                 if (dt.Rows.Count == 1)
                 {
-                    TelaPrincipal principal = new();
+                    TelaCadastroFinanceiro financeiro = new TelaCadastroFinanceiro(txtLogin.Text); // Passando o nome do usuário como argumento
                     this.Hide();
-                    principal.Show();
+                    financeiro.Show();
                 }
                 else
                 {
