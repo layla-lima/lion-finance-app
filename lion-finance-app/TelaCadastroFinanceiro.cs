@@ -18,7 +18,7 @@ namespace lion_finance_app
             try
             {
                 // Abrir conexão com o banco de dados Access
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
+                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\laysa\OneDrive\Documents\LionFinance\lion-finance-app\lion-finance-app\LionFinance.mdb";
                 OleDbConnection conn = new OleDbConnection(stringcon);
                 conn.Open();
 
