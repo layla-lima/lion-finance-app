@@ -832,24 +832,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\laysa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Layla\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laysa\\OneDrive\\Documents\\LionFinance\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
+      "projectUniqueName": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
       "projectName": "lion-finance-app",
-      "projectPath": "C:\\Users\\laysa\\OneDrive\\Documents\\LionFinance\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
-      "packagesPath": "C:\\Users\\laysa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laysa\\OneDrive\\Documents\\LionFinance\\lion-finance-app\\lion-finance-app\\obj\\",
+      "projectPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\lion-finance-app.csproj",
+      "packagesPath": "C:\\Users\\Layla\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\laysa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Layla\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

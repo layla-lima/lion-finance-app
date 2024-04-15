@@ -18,7 +18,7 @@ namespace lion_finance_app
         {
             try
             {
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\laysa\OneDrive\Documents\LionFinance\lion-finance-app\lion-finance-app\LionFinance.mdb";
+                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
                 using (OleDbConnection conn = new OleDbConnection(stringcon))
                 {
                     conn.Open();

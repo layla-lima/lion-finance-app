@@ -115,7 +115,7 @@
             btnCriarConta.Location = new Point(278, 438);
             btnCriarConta.Name = "btnCriarConta";
             btnCriarConta.Size = new Size(120, 23);
-            btnCriarConta.TabIndex = 7;
+            btnCriarConta.TabIndex = 9;
             btnCriarConta.Text = "Criar Conta";
             btnCriarConta.UseVisualStyleBackColor = false;
             btnCriarConta.Click += btnCriarConta_Click;
@@ -125,7 +125,7 @@
             txtConfSenha.Location = new Point(190, 355);
             txtConfSenha.Name = "txtConfSenha";
             txtConfSenha.Size = new Size(292, 23);
-            txtConfSenha.TabIndex = 9;
+            txtConfSenha.TabIndex = 8;
             txtConfSenha.UseSystemPasswordChar = true;
             // 
             // label5
@@ -136,7 +136,7 @@
             label5.Location = new Point(190, 331);
             label5.Name = "label5";
             label5.Size = new Size(135, 21);
-            label5.TabIndex = 8;
+            label5.TabIndex = 7;
             label5.Text = "Confirmar Senha:";
             // 
             // TelaCadastro

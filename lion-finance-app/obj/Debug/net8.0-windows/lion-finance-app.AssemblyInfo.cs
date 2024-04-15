@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lion-finance-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2249c0bc15965a25d742423d1bd5ec3a725ba14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5afb318ae8cda574eeba4c5955afdcec0fad5062")]
 [assembly: System.Reflection.AssemblyProductAttribute("lion-finance-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lion-finance-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

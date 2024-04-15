@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\laysa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\laysa\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Layla\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Layla\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
