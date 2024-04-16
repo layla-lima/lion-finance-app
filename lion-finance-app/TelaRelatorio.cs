@@ -1,6 +1,8 @@
-﻿using System;
+﻿using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+using OxyPlot.WindowsForms;
 using System.Data.OleDb;
-using System.Windows.Forms;
 
 namespace lion_finance_app
 {
@@ -12,6 +14,8 @@ namespace lion_finance_app
 
             // Buscar e exibir informações do banco de dados
             ExibirInformacoesDoBancoDeDados();
+            ExibirTop5Despesas();
+            ExibirTop5Entradas();
         }
 
         private void ExibirInformacoesDoBancoDeDados()
@@ -57,5 +61,120 @@ namespace lion_finance_app
                 MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
             }
         }
+
+        private void ExibirTop5Despesas()
+        {
+            // Criar o modelo de plotagem
+            var plotModel = new PlotModel { Title = "Top 5 Despesas", TitleColor = OxyColors.White, TextColor = OxyColors.White };
+
+            // Adicionar série de pizza com alguns dados de exemplo
+            var series = new PieSeries
+            {
+                StrokeThickness = 2.0,
+                AngleSpan = 360,
+                StartAngle = 0,
+                InnerDiameter = 0.6 // Define o tamanho do buraco no meio (valor entre 0 e 1)
+            };
+
+            // Adicionar dados à série
+            series.Slices.Add(new PieSlice("Categoria 1", 20));
+            series.Slices.Add(new PieSlice("Categoria 2", 30));
+            series.Slices.Add(new PieSlice("Categoria 3", 30));
+            series.Slices.Add(new PieSlice("Categoria 4", 10));
+            series.Slices.Add(new PieSlice("Categoria 5", 10));
+
+            // Adicionar a série ao modelo de plotagem
+            plotModel.Series.Add(series);
+
+            // Criar e configurar o PlotView
+            var plotView = new PlotView
+            {
+                Model = plotModel,
+                Width = 300, // Define a largura do controle
+                Height = 300, // Define a altura do controle
+            };
+
+            // Definir a localização do canto superior direito do controle
+            plotView.Location = new Point(this.ClientSize.Width - plotView.Width - 20, 20);
+
+            // Adicionar o PlotView ao formulário
+            Controls.Add(plotView);
+        }
+
+        private void ExibirTop5Entradas()
+        {
+            // Crie o modelo do gráfico
+            var plotModel = new PlotModel { Title = "Top 5 Entradas", TitleColor = OxyColors.White, TextColor = OxyColors.White };
+
+            // Defina o eixo de categoria (eixo X)
+            var categoryAxis = new CategoryAxis
+            {
+                Position = AxisPosition.Bottom,
+                MajorGridlineStyle = LineStyle.Solid,
+                MinorGridlineStyle = LineStyle.None,
+                TicklineColor = OxyColors.White,
+                TextColor = OxyColors.White // Cor do texto
+            };
+            plotModel.Axes.Add(categoryAxis);
+
+            // Defina o eixo de valor (eixo Y)
+            var valueAxis = new LinearAxis
+            {
+                Position = AxisPosition.Left,
+                MajorGridlineStyle = LineStyle.Solid,
+                MinorGridlineStyle = LineStyle.None,
+                TicklineColor = OxyColors.White,
+                TextColor = OxyColors.White // Cor do texto
+            };
+            plotModel.Axes.Add(valueAxis);
+
+            // Adicione os dados das colunas
+            var columnData = new List<ColumnData>
+            {
+                new ColumnData { Category = "Categoria 1", Value = 10 },
+                new ColumnData { Category = "Categoria 2", Value = 20 },
+                new ColumnData { Category = "Categoria 3", Value = 15 },
+                new ColumnData { Category = "Categoria 4", Value = 25 }
+            };
+
+            // Espaço entre as colunas
+            double espacoEntreColunas = 0.2;
+
+            // Adicione as barras manualmente
+            for (int i = 0; i < columnData.Count; i++)
+            {
+                var series = new RectangleBarSeries
+                {
+                    Items = { new RectangleBarItem(i + espacoEntreColunas / 2, 0, i + 1 - espacoEntreColunas / 2, columnData[i].Value) },
+                    FillColor = OxyColors.Blue // Cor da coluna
+                };
+                plotModel.Series.Add(series);
+                categoryAxis.Labels.Add(columnData[i].Category);
+            }
+
+            // Defina a cor das linhas do gráfico para branco
+            plotModel.DefaultColors = new List<OxyColor> { OxyColors.White };
+
+            // Crie o visualizador do OxyPlot
+            var plotView = new OxyPlot.WindowsForms.PlotView
+            {
+                Model = plotModel,
+                Width = 400,
+                Height = 300,
+                Location = new System.Drawing.Point(10, 10) // Posicione o gráfico à esquerda do formulário
+            };
+
+            // Adicione o visualizador ao formulário
+            Controls.Add(plotView);
+
+        }
+
+        // Classe para representar os dados das colunas
+        private class ColumnData
+        {
+            public string Category { get; set; }
+            public double Value { get; set; }
+        }
+
     }
 }
