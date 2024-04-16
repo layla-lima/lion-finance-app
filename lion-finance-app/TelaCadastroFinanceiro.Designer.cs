@@ -61,7 +61,7 @@
             // 
             lblControl.AutoSize = true;
             lblControl.Font = new Font("Broadway", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblControl.ForeColor = Color.White;
+            lblControl.ForeColor = Color.FromArgb(201, 160, 80);
             lblControl.Location = new Point(21, 25);
             lblControl.Name = "lblControl";
             lblControl.Size = new Size(469, 43);
@@ -258,12 +258,15 @@
             // 
             // btnProximo
             // 
+            btnProximo.BackColor = Color.FromArgb(201, 160, 80);
+            btnProximo.FlatStyle = FlatStyle.Popup;
+            btnProximo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnProximo.Location = new Point(672, 444);
             btnProximo.Name = "btnProximo";
             btnProximo.Size = new Size(106, 25);
             btnProximo.TabIndex = 22;
             btnProximo.Text = "Proximo";
-            btnProximo.UseVisualStyleBackColor = true;
+            btnProximo.UseVisualStyleBackColor = false;
             btnProximo.Click += btnProximo_Click;
             // 
             // lblRecebimentoVariavel
