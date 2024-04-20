@@ -2,7 +2,11 @@
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using OxyPlot.WindowsForms;
+using System;
+using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace lion_finance_app
 {
@@ -67,26 +71,35 @@ namespace lion_finance_app
             // Criar o modelo de plotagem
             var plotModel = new PlotModel { Title = "Top 5 Despesas", TitleColor = OxyColors.White, TextColor = OxyColors.White };
 
-            // Adicionar série de pizza com alguns dados de exemplo
+            // Definindo as cores para o gráfico de pizza
+            var coresPizza = new List<OxyColor>
+            {
+                OxyColor.FromRgb(201, 160, 80),
+                OxyColor.FromRgb(161, 130, 67),
+                OxyColor.FromRgb(142, 115, 61),
+                OxyColor.FromRgb(122, 100, 54),
+                OxyColor.FromRgb(112, 92, 51)
+            };
+
+            // Adicionando série de pizza com cores personalizadas
             var series = new PieSeries
             {
                 StrokeThickness = 2.0,
                 AngleSpan = 360,
                 StartAngle = 0,
-                InnerDiameter = 0.6 // Define o tamanho do buraco no meio (valor entre 0 e 1)
+                InnerDiameter = 0.6, // Define o tamanho do buraco no meio (valor entre 0 e 1)
             };
 
-            // Adicionar dados à série
-            series.Slices.Add(new PieSlice("Categoria 1", 20));
-            series.Slices.Add(new PieSlice("Categoria 2", 30));
-            series.Slices.Add(new PieSlice("Categoria 3", 30));
-            series.Slices.Add(new PieSlice("Categoria 4", 10));
-            series.Slices.Add(new PieSlice("Categoria 5", 10));
+            // Adicionando dados à série com cores personalizadas
+            for (int i = 0; i < coresPizza.Count; i++)
+            {
+                series.Slices.Add(new PieSlice($"Categoria {i + 1}", 20) { Fill = coresPizza[i] });
+            }
 
-            // Adicionar a série ao modelo de plotagem
+            // Adicionando a série ao modelo de plotagem
             plotModel.Series.Add(series);
 
-            // Criar e configurar o PlotView
+            // Criando e configurando o PlotView
             var plotView = new PlotView
             {
                 Model = plotModel,
@@ -94,10 +107,10 @@ namespace lion_finance_app
                 Height = 300, // Define a altura do controle
             };
 
-            // Definir a localização do canto superior direito do controle
+            // Definindo a localização do canto superior direito do controle
             plotView.Location = new Point(this.ClientSize.Width - plotView.Width - 20, 20);
 
-            // Adicionar o PlotView ao formulário
+            // Adicionando o PlotView ao formulário
             Controls.Add(plotView);
         }
 
@@ -146,7 +159,7 @@ namespace lion_finance_app
                 var series = new RectangleBarSeries
                 {
                     Items = { new RectangleBarItem(i + espacoEntreColunas / 2, 0, i + 1 - espacoEntreColunas / 2, columnData[i].Value) },
-                    FillColor = OxyColors.Blue // Cor da coluna
+                    FillColor = OxyColor.FromRgb(201, 160, 80) // Cor da coluna
                 };
                 plotModel.Series.Add(series);
                 categoryAxis.Labels.Add(columnData[i].Category);
@@ -175,6 +188,5 @@ namespace lion_finance_app
             public string Category { get; set; }
             public double Value { get; set; }
         }
-
     }
 }

@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|c:\\users\\layla\\documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|c:\\users\\layla\\documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastrofinanceiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|c:\\users\\layla\\documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telarelatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\telacadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E718E8E-D306-4C5B-BA99-78B903F33BE9}|lion-finance-app\\lion-finance-app.csproj|solutionrelative:lion-finance-app\\telacadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,25 +33,75 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 566,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 612,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TelaLogin.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaLogin.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaLogin.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaLogin.cs [Projeto]",
+              "RelativeToolTip": "lion-finance-app\\TelaLogin.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:39:11.819Z",
+              "IsPinned": true,
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TelaRelatorio.cs",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaRelatorio.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaRelatorio.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaRelatorio.cs",
+              "RelativeToolTip": "lion-finance-app\\TelaRelatorio.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAUwFEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T19:47:07.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "TelaRelatorio.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaRelatorio.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaRelatorio.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaRelatorio.cs [Projeto]",
+              "RelativeToolTip": "lion-finance-app\\TelaRelatorio.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:07:51.501Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TelaCadastroFinanceiro.cs",
               "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs",
               "RelativeDocumentMoniker": "lion-finance-app\\TelaCadastroFinanceiro.cs",
               "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs",
               "RelativeToolTip": "lion-finance-app\\TelaCadastroFinanceiro.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAiwBwAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T19:48:03.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "TelaCadastro.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastro.cs",
+              "RelativeDocumentMoniker": "lion-finance-app\\TelaCadastro.cs",
+              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastro.cs [Projeto]",
+              "RelativeToolTip": "lion-finance-app\\TelaCadastro.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:17:40.678Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TelaCadastro.cs",
               "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastro.cs",
               "RelativeDocumentMoniker": "lion-finance-app\\TelaCadastro.cs",
@@ -57,48 +111,11 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T01:56:56.777Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TelaCadastroFinanceiro.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs",
-              "RelativeDocumentMoniker": "lion-finance-app\\TelaCadastroFinanceiro.cs",
-              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaCadastroFinanceiro.cs [Projeto]",
-              "RelativeToolTip": "lion-finance-app\\TelaCadastroFinanceiro.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T18:23:06.653Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TelaLogin.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaLogin.cs",
-              "RelativeDocumentMoniker": "lion-finance-app\\TelaLogin.cs",
-              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaLogin.cs [Projeto]",
-              "RelativeToolTip": "lion-finance-app\\TelaLogin.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T18:18:38.635Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TelaRelatorio.cs",
-              "DocumentMoniker": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaRelatorio.cs",
-              "RelativeDocumentMoniker": "lion-finance-app\\TelaRelatorio.cs",
-              "ToolTip": "C:\\Users\\Layla\\Documents\\lion-finance-app\\lion-finance-app\\lion-finance-app\\TelaRelatorio.cs",
-              "RelativeToolTip": "lion-finance-app\\TelaRelatorio.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAADwvykAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T19:47:07.15Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 182,
+          "DockedWidth": 136,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -108,6 +125,14 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }
