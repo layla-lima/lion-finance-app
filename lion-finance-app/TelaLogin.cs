@@ -8,7 +8,7 @@ namespace lion_finance_app
     public partial class TelaLogin : Form
     {
         // string de conexão para o banco de dados Access
-        string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
+        string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\nikol\OneDrive\Documentos\projetos\unip\lion-finance-app\lion-finance-app\LionFinance.mdb";
 
         public TelaLogin()
         {
@@ -24,8 +24,7 @@ namespace lion_finance_app
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            try{
                 // Abrir conexão com o banco de dados Access
                 OleDbConnection conn = new OleDbConnection(stringcon);
                 conn.Open();
@@ -40,21 +39,15 @@ namespace lion_finance_app
                 DataTable dt = new DataTable();
                 dp.Fill(dt);
 
-                if (dt.Rows.Count == 1)
-                {
-                    TelaCadastroFinanceiro financeiro = new TelaCadastroFinanceiro(txtLogin.Text); // Passando o nome do usuário como argumento
-                    this.Hide();
+                if (dt.Rows.Count == 1){
+                    TelaRelatorio financeiro = new(txtLogin.Text); // Passando o nome do usuário como argumento
+                    conn.Close(); // Fechar conexão com o banco de dados Access
                     financeiro.Show();
-                }
-                else
-                {
+                    this.Hide();
+                }else{
                     MessageBox.Show("Usuário ou Senha Incorreto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                conn.Close(); // Fechar conexão com o banco de dados Access
-            }
-            catch (Exception erro)
-            {
+            }catch (Exception erro){
                 MessageBox.Show(erro.Message);
             }
         }

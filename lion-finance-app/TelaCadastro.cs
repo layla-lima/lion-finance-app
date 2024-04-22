@@ -22,7 +22,7 @@ namespace lion_finance_app
                     return; // Retorna sem prosseguir com a criação da conta
                 }
 
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
+                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\nikol\OneDrive\Documentos\projetos\unip\lion-finance-app\lion-finance-app\\LionFinance.mdb";
                 OleDbConnection conn = new OleDbConnection(stringcon);
                 conn.Open();
 
@@ -35,7 +35,7 @@ namespace lion_finance_app
                 MessageBox.Show("Conta criada com sucesso!");
 
                 // Enviar nome do usuário pelo construtor para a tela de login
-                TelaLogin telaLogin = new TelaLogin();
+                TelaCadastroFinanceiro telaCadastroFinanceiro = new TelaCadastroFinanceiro(txtNome.Text);
 
                 // Limpar dados após criar conta:
                 txtEmail.Clear();
@@ -46,7 +46,7 @@ namespace lion_finance_app
                 conn.Close();
 
                 // Abrir a tela de login após usuário criar conta
-                telaLogin.Show();
+                telaCadastroFinanceiro.Show();
                 this.Hide(); // Esconde a tela de cadastro após abrir a tela de login
             }
             catch (Exception erro)

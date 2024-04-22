@@ -18,7 +18,7 @@ namespace lion_finance_app
             try
             {
                 // Abrir conexão com o banco de dados Access
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
+                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\nikol\OneDrive\Documentos\projetos\unip\lion-finance-app\lion-finance-app\LionFinance.mdb";
                 OleDbConnection conn = new OleDbConnection(stringcon);
                 conn.Open();
 
@@ -39,15 +39,14 @@ namespace lion_finance_app
                 cmdUpdate.Parameters.AddWithValue("@id_financias", idFinancias);
                 cmdUpdate.Parameters.AddWithValue("@nome", TxtNome);
                 cmdUpdate.ExecuteNonQuery();
-
+                
                 MessageBox.Show("Finanças salvas com sucesso!");
 
-                TelaRelatorio telaRelatorio = new TelaRelatorio();
-                telaRelatorio.Show();
-                this.Close();
-
+                TelaRelatorio telaRelatorio = new TelaRelatorio(TxtNome);
                 conn.Close();
 
+                telaRelatorio.Show();
+                this.Hide();
 
             }
             catch (Exception erro)
