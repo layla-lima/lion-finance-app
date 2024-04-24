@@ -37,6 +37,7 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
+            lblLiquidado = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -48,7 +49,7 @@
             lblAluguel.AutoSize = true;
             lblAluguel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblAluguel.ForeColor = SystemColors.ButtonHighlight;
-            lblAluguel.Location = new Point(657, 440);
+            lblAluguel.Location = new Point(656, 467);
             lblAluguel.Margin = new Padding(2, 0, 2, 0);
             lblAluguel.Name = "lblAluguel";
             lblAluguel.Size = new Size(74, 21);
@@ -60,7 +61,7 @@
             lblLazer.AutoSize = true;
             lblLazer.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblLazer.ForeColor = SystemColors.ButtonHighlight;
-            lblLazer.Location = new Point(657, 465);
+            lblLazer.Location = new Point(656, 492);
             lblLazer.Margin = new Padding(2, 0, 2, 0);
             lblLazer.Name = "lblLazer";
             lblLazer.Size = new Size(57, 21);
@@ -72,7 +73,7 @@
             lblParcelas.AutoSize = true;
             lblParcelas.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblParcelas.ForeColor = SystemColors.ButtonHighlight;
-            lblParcelas.Location = new Point(657, 513);
+            lblParcelas.Location = new Point(656, 540);
             lblParcelas.Margin = new Padding(2, 0, 2, 0);
             lblParcelas.Name = "lblParcelas";
             lblParcelas.Size = new Size(77, 21);
@@ -84,7 +85,7 @@
             lblTransporte.AutoSize = true;
             lblTransporte.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblTransporte.ForeColor = SystemColors.ButtonHighlight;
-            lblTransporte.Location = new Point(657, 489);
+            lblTransporte.Location = new Point(656, 516);
             lblTransporte.Margin = new Padding(2, 0, 2, 0);
             lblTransporte.Name = "lblTransporte";
             lblTransporte.Size = new Size(97, 21);
@@ -94,7 +95,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(625, 438);
+            pictureBox1.Location = new Point(624, 465);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(28, 21);
@@ -105,7 +106,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(625, 511);
+            pictureBox2.Location = new Point(624, 538);
             pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(28, 21);
@@ -116,7 +117,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(625, 488);
+            pictureBox3.Location = new Point(624, 515);
             pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(28, 21);
@@ -127,7 +128,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(625, 463);
+            pictureBox4.Location = new Point(624, 490);
             pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(28, 21);
@@ -135,12 +136,24 @@
             pictureBox4.TabIndex = 7;
             pictureBox4.TabStop = false;
             // 
+            // lblLiquidado
+            // 
+            lblLiquidado.AutoSize = true;
+            lblLiquidado.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLiquidado.ForeColor = Color.White;
+            lblLiquidado.Location = new Point(40, 623);
+            lblLiquidado.Name = "lblLiquidado";
+            lblLiquidado.Size = new Size(130, 25);
+            lblLiquidado.TabIndex = 8;
+            lblLiquidado.Text = "Valor liquido: ";
+            // 
             // TelaRelatorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(17, 17, 17);
-            ClientSize = new Size(978, 575);
+            ClientSize = new Size(978, 678);
+            Controls.Add(lblLiquidado);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -170,5 +183,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
+        private Label lblLiquidado;
     }
 }

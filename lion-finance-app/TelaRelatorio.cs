@@ -2,7 +2,12 @@
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using OxyPlot.WindowsForms;
+using System;
+using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 using static lion_finance_app.TelaRelatorio.DadosFinanceirosEntity;
 
 namespace lion_finance_app
@@ -20,30 +25,32 @@ namespace lion_finance_app
         private double transporte;
         private string nomeUsuario;
 
-
         public TelaRelatorio(string nomeUsuario)
         {
             InitializeComponent();
 
             this.nomeUsuario = nomeUsuario;
 
-            //Retorna objeto com os dados financeiros do cliente por consulta sql
+            // Retorna objeto com os dados financeiros do cliente por consulta sql
             DadosFinanceirosEntity dadosFinanceirosEntity = retornaDadosFinanceirosCliente();
 
-            // exibir informações do banco de dados
+            // Exibir informações do banco de dados
             ExibirInformacoesDoBancoDeDados(dadosFinanceirosEntity);
 
-            // exibir top 5 maiores despesas
+            // Exibir top 5 maiores despesas
             ExibirTop5Despesas(dadosFinanceirosEntity);
 
-            //exibir porcentual das duas entradas
+            // Exibir porcentual das duas entradas
             ExibirPorcentualEntradas(dadosFinanceirosEntity);
 
-            //exibir total das entradas e saidas
+            // Exibir total das entradas e saídas
             totalEntradasSaidas(dadosFinanceirosEntity);
 
+            // Exibir valor líquido
+            ExibirValorLiquido(dadosFinanceirosEntity);
         }
 
+        // Método para retornar os dados financeiros do cliente do banco de dados
         private DadosFinanceirosEntity retornaDadosFinanceirosCliente()
         {
             try
@@ -61,7 +68,6 @@ namespace lion_finance_app
                 // Verificar se há resultados
                 if (reader.Read())
                 {
-
                     // Extrair os valores do banco de dados
                     financiamento = Convert.ToDouble(reader["financiamento"]);
                     conta = Convert.ToDouble(reader["contas"]);
@@ -77,7 +83,6 @@ namespace lion_finance_app
                        new DespesasEntity(financiamento, conta, parcelamento, aluguel, compras, lazer, transporte));
 
                     return financeirosEntity;
-
                 }
                 else
                 {
@@ -89,6 +94,34 @@ namespace lion_finance_app
                 MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
             }
             return null;
+        }
+
+        // Método para calcular o valor líquido
+        private double CalcularValorLiquido(DadosFinanceirosEntity dados)
+        {
+            // Calcula o total das entradas
+            double totalEntradas = dados.RendaFixa + dados.RendaVariavel;
+
+            // Calcula o total das despesas
+            double totalDespesas = dados.Despesas.Aluguel +
+                                    dados.Despesas.Parcelamento +
+                                    dados.Despesas.Lazer +
+                                    dados.Despesas.Compras +
+                                    dados.Despesas.Contas +
+                                    dados.Despesas.Financiamento +
+                                    dados.Despesas.Transporte;
+
+            // Calcula o valor líquido
+            double valorLiquido = totalEntradas - totalDespesas;
+
+            return valorLiquido;
+        }
+
+        // Método para exibir o valor líquido
+        private void ExibirValorLiquido(DadosFinanceirosEntity dados)
+        {
+            double valorLiquido = CalcularValorLiquido(dados);
+            lblLiquidado.Text = $"Valor líquido: R$ {valorLiquido:F2}";
         }
 
         //Classe para comportar a entidade "Financias" do clienet
@@ -264,8 +297,9 @@ namespace lion_finance_app
                 Model = plotModel,
                 Width = 400,
                 Height = 300,
-                Location = new System.Drawing.Point(10, 10) // Posicionar o gráfico no formulário
+                Location = new System.Drawing.Point(10, 20) // Posicionar o gráfico no formulário
             };
+            plotView.Left = 30; // mover gráfico pra direita em 30 pixels 
 
             // Adicionar o visualizador ao formulário
             Controls.Add(plotView);
@@ -294,17 +328,17 @@ namespace lion_finance_app
             panel1.BackColor = douradoSuaveEntradas; // Cor para Entradas
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Size = new System.Drawing.Size(180, 120); // Reduzindo o tamanho do primeiro painel
-            panel1.Location = new System.Drawing.Point(50, this.ClientSize.Height - panel1.Height - 50); // Ajustando a posição do primeiro painel
+            panel1.Location = new System.Drawing.Point(50, this.ClientSize.Height - panel1.Height - 100); // Ajustando a posição do primeiro painel
 
             panel2.BackColor = marromEscuroDespesas; // Cor para Despesas
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Size = new System.Drawing.Size(180, 120); // Reduzindo o tamanho do segundo painel
-            panel2.Location = new System.Drawing.Point(panel1.Right + 30, this.ClientSize.Height - panel2.Height - 50); // Ajustando a posição do segundo painel
+            panel2.Location = new System.Drawing.Point(panel1.Right + 30, this.ClientSize.Height - panel2.Height - 100); // Ajustando a posição do segundo painel
 
             // Adicionando títulos aos painéis
             Label label1 = new Label();
             label1.Text = "Entradas";
-            label1.Location = new System.Drawing.Point(panel1.Left + 10, panel1.Top - 20); // Ajustando a posição do título do primeiro painel
+            label1.Location = new System.Drawing.Point(panel1.Left + 10, panel1.Top - 30); // Ajustando a posição do título do primeiro painel
             label1.BackColor = Color.Transparent; // Removendo o fundo do título
             label1.ForeColor = Color.White; // Definindo a cor do texto como branco
             label1.Font = new Font(label1.Font, FontStyle.Bold); // Definindo o estilo da fonte como negrito
@@ -312,7 +346,7 @@ namespace lion_finance_app
 
             Label label2 = new Label();
             label2.Text = "Despesas";
-            label2.Location = new System.Drawing.Point(panel2.Left + 10, panel2.Top - 20); // Ajustando a posição do título do segundo painel
+            label2.Location = new System.Drawing.Point(panel2.Left + 10, panel2.Top - 30); // Ajustando a posição do título do segundo painel
             label2.BackColor = Color.Transparent; // Removendo o fundo do título
             label2.ForeColor = Color.White; // Definindo a cor do texto como branco
             label2.Font = new Font(label2.Font, FontStyle.Bold); // Definindo o estilo da fonte como negrito
