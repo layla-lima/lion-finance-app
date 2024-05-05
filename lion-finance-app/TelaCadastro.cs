@@ -22,19 +22,15 @@ namespace lion_finance_app
                     return; // Retorna sem prosseguir com a criação da conta
                 }
 
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
-                OleDbConnection conn = new OleDbConnection(stringcon);
-                conn.Open();
+                // Abri instancia para a classe de acessoDB
+                AcessoDB acessoDB = new AcessoDB();
 
-                string SQL = "INSERT INTO Usuarios(Nome, Email, Senha) VALUES ";
-                SQL += "('" + txtNome.Text + "', '" + txtEmail.Text + "', '" + txtSenha.Text + "')";
-                OleDbCommand cmd = new OleDbCommand(SQL, conn);
-
-                cmd.ExecuteNonQuery();
+                //acesso metodo de insercao do registro do usuario na tabela
+                acessoDB.InsercaoUsuario(txtNome.Text, txtEmail.Text, txtSenha.Text);
 
                 MessageBox.Show("Conta criada com sucesso!");
 
-                // Enviar nome do usuário pelo construtor para a tela de login
+                // Enviar nome do usuário pelo construtor para a tela de cadastro financeiro
                 TelaCadastroFinanceiro telaCadastroFinanceiro = new TelaCadastroFinanceiro(txtNome.Text);
 
                 // Limpar dados após criar conta:
@@ -42,8 +38,6 @@ namespace lion_finance_app
                 txtNome.Clear();
                 txtSenha.Clear();
                 txtConfSenha.Clear();
-                // Fechar conexão
-                conn.Close();
 
                 // Abrir a tela de login após usuário criar conta
                 telaCadastroFinanceiro.Show();
