@@ -7,9 +7,6 @@ namespace lion_finance_app
 {
     public partial class TelaLogin : Form
     {
-        // string de conexão para o banco de dados Access
-        string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
-
         public TelaLogin()
         {
             InitializeComponent();
@@ -25,23 +22,15 @@ namespace lion_finance_app
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             try{
-                // Abrir conexão com o banco de dados Access
-                OleDbConnection conn = new OleDbConnection(stringcon);
-                conn.Open();
 
-                // Consultar o banco de dados Access
-                string query = "SELECT * FROM Usuarios WHERE Nome = @Nome AND Senha = @Senha";
-                OleDbCommand cmd = new OleDbCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Nome", txtLogin.Text);
-                cmd.Parameters.AddWithValue("@Senha", txtSenha.Text);
+                // Abri instancia para a classe de acessoDB
+                AcessoDB acessoDB = new AcessoDB();
 
-                OleDbDataAdapter dp = new OleDbDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                dp.Fill(dt);
+                //acessando metodo de consulta ao banco de dados para acesso do usuario
+                DataTable registroUsuario = acessoDB.AcessoUsuario(txtLogin.Text, txtSenha.Text);
 
-                if (dt.Rows.Count == 1){
+                if (registroUsuario.Rows.Count == 1){
                     TelaRelatorio financeiro = new(txtLogin.Text); // Passando o nome do usuário como argumento
-                    conn.Close(); // Fechar conexão com o banco de dados Access
                     financeiro.Show();
                     this.Hide();
                 }else{

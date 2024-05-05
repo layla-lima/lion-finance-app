@@ -8,21 +8,13 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static lion_finance_app.TelaRelatorio.DadosFinanceirosEntity;
+using static lion_finance_app.TelaRelatorio;
 
 namespace lion_finance_app
 {
     public partial class TelaRelatorio : Form
     {
-        private double rendaFixa;
-        private double rendaVariavel;
-        private double financiamento;
-        private double conta;
-        private double parcelamento;
-        private double aluguel;
-        private double compras;
-        private double lazer;
-        private double transporte;
+
         private string nomeUsuario;
 
         public TelaRelatorio(string nomeUsuario)
@@ -34,66 +26,33 @@ namespace lion_finance_app
             // Retorna objeto com os dados financeiros do cliente por consulta sql
             DadosFinanceirosEntity dadosFinanceirosEntity = retornaDadosFinanceirosCliente();
 
-            // Exibir informações do banco de dados
-            ExibirInformacoesDoBancoDeDados(dadosFinanceirosEntity);
+            if(dadosFinanceirosEntity != null) {
 
-            // Exibir top 5 maiores despesas
-            ExibirTop5Despesas(dadosFinanceirosEntity);
+                // Exibir informações do banco de dados
+                ExibirInformacoesDoBancoDeDados(dadosFinanceirosEntity);
 
-            // Exibir porcentual das duas entradas
-            ExibirPorcentualEntradas(dadosFinanceirosEntity);
+                // Exibir top 5 maiores despesas
+                ExibirTop5Despesas(dadosFinanceirosEntity);
 
-            // Exibir total das entradas e saídas
-            totalEntradasSaidas(dadosFinanceirosEntity);
+                // Exibir porcentual das duas entradas
+                ExibirPorcentualEntradas(dadosFinanceirosEntity);
 
-            // Exibir valor líquido
-            ExibirValorLiquido(dadosFinanceirosEntity);
+                // Exibir total das entradas e saídas
+                totalEntradasSaidas(dadosFinanceirosEntity);
+
+                // Exibir valor líquido
+                ExibirValorLiquido(dadosFinanceirosEntity);
+            }
+
+            this.Hide();
         }
 
         // Método para retornar os dados financeiros do cliente do banco de dados
         private DadosFinanceirosEntity retornaDadosFinanceirosCliente()
         {
-            try
-            {
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
-                OleDbConnection conn = new OleDbConnection(stringcon);
-                conn.Open();
-
-                // Consulta SQL para obter as informações desejadas do banco de dados
-                string SQL = "SELECT Financias.* FROM Financias WHERE Financias.id_financias IN (SELECT Usuarios.id_financias FROM Usuarios WHERE Usuarios.Nome = @nome)";
-                OleDbCommand cmd = new OleDbCommand(SQL, conn);
-                cmd.Parameters.AddWithValue("@nome", nomeUsuario);
-                OleDbDataReader reader = cmd.ExecuteReader();
-
-                // Verificar se há resultados
-                if (reader.Read())
-                {
-                    // Extrair os valores do banco de dados
-                    financiamento = Convert.ToDouble(reader["financiamento"]);
-                    conta = Convert.ToDouble(reader["contas"]);
-                    parcelamento = Convert.ToDouble(reader["parcelamentos"]);
-                    aluguel = Convert.ToDouble(reader["aluguel_mensal"]);
-                    compras = Convert.ToDouble(reader["compras"]);
-                    lazer = Convert.ToDouble(reader["lazer"]);
-                    transporte = Convert.ToDouble(reader["transporte"]);
-                    rendaFixa = Convert.ToDouble(reader["renda_fixa"]);
-                    rendaVariavel = Convert.ToDouble(reader["renda_variavel"]);
-
-                    DadosFinanceirosEntity financeirosEntity = new DadosFinanceirosEntity(rendaFixa, rendaVariavel,
-                       new DespesasEntity(financiamento, conta, parcelamento, aluguel, compras, lazer, transporte));
-
-                    return financeirosEntity;
-                }
-                else
-                {
-                    MessageBox.Show("Nenhuma informação encontrada no banco de dados.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
-            }
-            return null;
+            // Abri instancia para a classe de acessoDB
+            AcessoDB acessoDB = new AcessoDB();
+            return acessoDB.AcessoFinancias(nomeUsuario);
         }
 
         // Método para calcular o valor líquido
@@ -122,48 +81,6 @@ namespace lion_finance_app
         {
             double valorLiquido = CalcularValorLiquido(dados);
             lblLiquidado.Text = $"Valor líquido: R$ {valorLiquido:F2}";
-        }
-
-        //Classe para comportar a entidade "Financias" do clienet
-        public class DadosFinanceirosEntity
-        {
-            // Propriedades públicas para os dados financeiros
-            public double RendaFixa { get; set; }
-            public double RendaVariavel { get; set; }
-            public DespesasEntity Despesas { get; set; }
-
-            // Construtor da classe DadosFinanceirosEntity
-            public DadosFinanceirosEntity(double rendaFixa, double rendaVariavel, DespesasEntity despesas)
-            {
-                RendaFixa = rendaFixa;
-                RendaVariavel = rendaVariavel;
-                Despesas = despesas;
-            }
-
-            // Definição da classe DespesasEntity
-            public class DespesasEntity
-            {
-                // Propriedades públicas para os dados de despesas
-                public double Financiamento { get; set; }
-                public double Contas { get; set; }
-                public double Parcelamento { get; set; }
-                public double Aluguel { get; set; }
-                public double Compras { get; set; }
-                public double Lazer { get; set; }
-                public double Transporte { get; set; }
-
-                // Construtor da classe DespesasEntity
-                public DespesasEntity(double financiamento, double contas, double parcelamento, double aluguel, double compras, double lazer, double transporte)
-                {
-                    Financiamento = financiamento;
-                    Contas = contas;
-                    Parcelamento = parcelamento;
-                    Aluguel = aluguel;
-                    Compras = compras;
-                    Lazer = lazer;
-                    Transporte = transporte;
-                }
-            }
         }
 
 
