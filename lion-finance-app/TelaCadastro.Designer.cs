@@ -43,11 +43,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(183, 57);
+            label1.Font = new Font("Broadway", 27.75F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(201, 160, 80);
+            label1.Location = new Point(154, 63);
             label1.Name = "label1";
-            label1.Size = new Size(299, 50);
+            label1.Size = new Size(367, 42);
             label1.TabIndex = 0;
             label1.Text = "Criar uma conta";
             // 

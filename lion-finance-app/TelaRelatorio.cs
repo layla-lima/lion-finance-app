@@ -2,7 +2,12 @@
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using OxyPlot.WindowsForms;
+using System;
+using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 using static lion_finance_app.TelaRelatorio.DadosFinanceirosEntity;
 
 namespace lion_finance_app
@@ -20,34 +25,37 @@ namespace lion_finance_app
         private double transporte;
         private string nomeUsuario;
 
-
         public TelaRelatorio(string nomeUsuario)
         {
             InitializeComponent();
 
             this.nomeUsuario = nomeUsuario;
 
-            //Retorna objeto com os dados financeiros do cliente por consulta sql
+            // Retorna objeto com os dados financeiros do cliente por consulta sql
             DadosFinanceirosEntity dadosFinanceirosEntity = retornaDadosFinanceirosCliente();
 
-            // exibir informações do banco de dados
+            // Exibir informações do banco de dados
             ExibirInformacoesDoBancoDeDados(dadosFinanceirosEntity);
 
-            // exibir top 5 maiores despesas
+            // Exibir top 5 maiores despesas
             ExibirTop5Despesas(dadosFinanceirosEntity);
 
-            //exibir porcentual das duas entradas
+            // Exibir porcentual das duas entradas
             ExibirPorcentualEntradas(dadosFinanceirosEntity);
 
-            //exibir total das entradas e saidas
+            // Exibir total das entradas e saídas
             totalEntradasSaidas(dadosFinanceirosEntity);
 
+            // Exibir valor líquido
+            ExibirValorLiquido(dadosFinanceirosEntity);
         }
 
-        private DadosFinanceirosEntity retornaDadosFinanceirosCliente() {
+        // Método para retornar os dados financeiros do cliente do banco de dados
+        private DadosFinanceirosEntity retornaDadosFinanceirosCliente()
+        {
             try
             {
-                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\nikol\OneDrive\Documentos\projetos\unip\lion-finance-app\lion-finance-app\LionFinance.mdb";
+                string stringcon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Layla\Documents\lion-finance-app\lion-finance-app\lion-finance-app\LionFinance.mdb";
                 OleDbConnection conn = new OleDbConnection(stringcon);
                 conn.Open();
 
@@ -57,34 +65,63 @@ namespace lion_finance_app
                 cmd.Parameters.AddWithValue("@nome", nomeUsuario);
                 OleDbDataReader reader = cmd.ExecuteReader();
 
-               // Verificar se há resultados
-                if (reader.Read()){
-
+                // Verificar se há resultados
+                if (reader.Read())
+                {
                     // Extrair os valores do banco de dados
-                     financiamento = Convert.ToDouble(reader["financiamento"]);
-                     conta = Convert.ToDouble(reader["contas"]);
-                     parcelamento = Convert.ToDouble(reader["parcelamentos"]);
-                     aluguel = Convert.ToDouble(reader["aluguel_mensal"]);
-                     compras = Convert.ToDouble(reader["compras"]);
-                     lazer = Convert.ToDouble(reader["lazer"]);
-                     transporte = Convert.ToDouble(reader["transporte"]);
-                     rendaFixa = Convert.ToDouble(reader["renda_fixa"]);
-                     rendaVariavel = Convert.ToDouble(reader["renda_variavel"]);
+                    financiamento = Convert.ToDouble(reader["financiamento"]);
+                    conta = Convert.ToDouble(reader["contas"]);
+                    parcelamento = Convert.ToDouble(reader["parcelamentos"]);
+                    aluguel = Convert.ToDouble(reader["aluguel_mensal"]);
+                    compras = Convert.ToDouble(reader["compras"]);
+                    lazer = Convert.ToDouble(reader["lazer"]);
+                    transporte = Convert.ToDouble(reader["transporte"]);
+                    rendaFixa = Convert.ToDouble(reader["renda_fixa"]);
+                    rendaVariavel = Convert.ToDouble(reader["renda_variavel"]);
 
-                     DadosFinanceirosEntity financeirosEntity = new DadosFinanceirosEntity(rendaFixa, rendaVariavel, 
-                        new DespesasEntity(financiamento, conta, parcelamento, aluguel, compras, lazer, transporte));
+                    DadosFinanceirosEntity financeirosEntity = new DadosFinanceirosEntity(rendaFixa, rendaVariavel,
+                       new DespesasEntity(financiamento, conta, parcelamento, aluguel, compras, lazer, transporte));
 
-                     return financeirosEntity;
-
-                }else{
-                     MessageBox.Show("Nenhuma informação encontrada no banco de dados.");
-                }     
+                    return financeirosEntity;
+                }
+                else
+                {
+                    MessageBox.Show("Nenhuma informação encontrada no banco de dados.");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
             }
             return null;
+        }
+
+        // Método para calcular o valor líquido
+        private double CalcularValorLiquido(DadosFinanceirosEntity dados)
+        {
+            // Calcula o total das entradas
+            double totalEntradas = dados.RendaFixa + dados.RendaVariavel;
+
+            // Calcula o total das despesas
+            double totalDespesas = dados.Despesas.Aluguel +
+                                    dados.Despesas.Parcelamento +
+                                    dados.Despesas.Lazer +
+                                    dados.Despesas.Compras +
+                                    dados.Despesas.Contas +
+                                    dados.Despesas.Financiamento +
+                                    dados.Despesas.Transporte;
+
+            // Calcula o valor líquido
+            double valorLiquido = totalEntradas - totalDespesas;
+
+            return valorLiquido;
+        }
+
+        // Método para exibir o valor líquido
+        private void ExibirValorLiquido(DadosFinanceirosEntity dados)
+        {
+            double valorLiquido = CalcularValorLiquido(dados);
+            lblLiquidado.Text = $"Valor líquido: R$ {valorLiquido:F2}";
         }
 
         //Classe para comportar a entidade "Financias" do clienet
@@ -133,65 +170,66 @@ namespace lion_finance_app
         private void ExibirInformacoesDoBancoDeDados(DadosFinanceirosEntity entity)
         {
 
-           // Exibir os valores em labels
-           lblAluguel.Text = $"Aluguel: R$ {entity.Despesas.Aluguel:F2}";
-           lblLazer.Text = $"Lazer: R$ {entity.Despesas.Lazer:F2}";
-           lblTransporte.Text = $"Transporte: R$ {entity.Despesas.Transporte:F2}";
-           lblParcelas.Text = $"Parcelas: R$ {entity.Despesas.Parcelamento:F2}";
+            // Exibir os valores em labels
+            lblAluguel.Text = $"Aluguel: R$ {entity.Despesas.Aluguel:F2}";
+            lblLazer.Text = $"Lazer: R$ {entity.Despesas.Lazer:F2}";
+            lblTransporte.Text = $"Transporte: R$ {entity.Despesas.Transporte:F2}";
+            lblParcelas.Text = $"Parcelas: R$ {entity.Despesas.Parcelamento:F2}";
 
         }
 
         private void ExibirTop5Despesas(DadosFinanceirosEntity dadosFinanceirosEntity)
-        {
-            // Criar o modelo de plotagem
-            var plotModel = new PlotModel { Title = "Top 5 Despesas", TitleColor = OxyColors.White, TextColor = OxyColors.White };
+{
+    // Criar o modelo de plotagem
+    var plotModel = new PlotModel { Title = "Top 5 Despesas", TitleColor = OxyColors.White, TextColor = OxyColors.White };
 
-            // Definindo as cores para o gráfico de pizza
-            var coresPizza = new List<OxyColor>
-            {
-                OxyColor.FromRgb(201, 160, 80),
-                OxyColor.FromRgb(161, 130, 67),
-                OxyColor.FromRgb(142, 115, 61),
-                OxyColor.FromRgb(122, 100, 54),
-                OxyColor.FromRgb(112, 92, 51)
-            };
+    // Ajustar o padding do título para afastá-lo um pouco do gráfico
+    plotModel.TitlePadding = 20; 
+    // Definindo as cores para o gráfico de pizza
+    var coresPizza = new List<OxyColor>
+    {
+        OxyColor.FromRgb(201, 160, 80),
+        OxyColor.FromRgb(161, 130, 67),
+        OxyColor.FromRgb(142, 115, 61),
+        OxyColor.FromRgb(122, 100, 54),
+        OxyColor.FromRgb(112, 92, 51)
+    };
 
-            // Adicionando série de pizza com cores personalizadas
-            var series = new PieSeries
-            {
-                StrokeThickness = 2.0,
-                AngleSpan = 360,
-                StartAngle = 0,
-                InnerDiameter = 0.6, // Define o tamanho do buraco no meio (valor entre 0 e 1)
-            };
+    // Adicionando série de pizza com cores personalizadas
+    var series = new PieSeries
+    {
+        StrokeThickness = 2.0,
+        AngleSpan = 360,
+        StartAngle = 0,
+        InnerDiameter = 0.6, // Define o tamanho do buraco no meio (valor entre 0 e 1)
+    };
 
-            var maioresDespesas = ObterMaioresDespesas(dadosFinanceirosEntity);
+    var maioresDespesas = ObterMaioresDespesas(dadosFinanceirosEntity);
 
-            // Adicionando dados à série com cores personalizadas
-            int index = 0;
-            foreach (var (categoria, valor) in maioresDespesas)
-            {
-                series.Slices.Add(new PieSlice(categoria, valor) { Fill = coresPizza[index++] });
-            }
+    // Adicionando dados à série com cores personalizadas
+    foreach (var (categoria, valor) in maioresDespesas)
+    {
+        series.Slices.Add(new PieSlice(categoria, valor) { Fill = coresPizza[series.Slices.Count % coresPizza.Count] });
+    }
 
+    // Adicionando a série ao modelo de plotagem
+    plotModel.Series.Add(series);
 
-            // Adicionando a série ao modelo de plotagem
-            plotModel.Series.Add(series);
+    // Criando e configurando o PlotView
+    var plotView = new PlotView
+    {
+        Model = plotModel,
+        Width = 500, // Define a largura do controle
+        Height = 350, // Define a altura do controle
+    };
 
-            // Criando e configurando o PlotView
-            var plotView = new PlotView
-            {
-                Model = plotModel,
-                Width = 500, // Define a largura do controle
-                Height = 350, // Define a altura do controle
-            };
+    // Definindo a localização do canto superior direito do controle
+    plotView.Location = new Point(this.ClientSize.Width - plotView.Width - 20, 20);
 
-            // Definindo a localização do canto superior direito do controle
-            plotView.Location = new Point(this.ClientSize.Width - plotView.Width - 20, 20);
+    // Adicionando o PlotView ao formulário
+    Controls.Add(plotView);
+}
 
-            // Adicionando o PlotView ao formulário
-            Controls.Add(plotView);
-        }
 
         // Método para retornar as 5 maiores despesas
         public Dictionary<string, double> ObterMaioresDespesas(DadosFinanceirosEntity dados)
@@ -217,77 +255,56 @@ namespace lion_finance_app
             return maioresDespesas.ToDictionary(pair => pair.Key, pair => pair.Value);
         }
 
-         private void ExibirPorcentualEntradas(DadosFinanceirosEntity dados)
+        private void ExibirPorcentualEntradas(DadosFinanceirosEntity dados)
         {
             // Crie o modelo do gráfico
             var plotModel = new PlotModel { Title = "Porcentual Entradas", TitleColor = OxyColors.White, TextColor = OxyColors.White };
+            plotModel.TitlePadding = 20; // Ajuste este valor conforme necessário para a distância desejada
 
-            // Defina o eixo de categoria (eixo X)
-            var categoryAxis = new CategoryAxis
+            // Criar a série de pizza
+            var series = new PieSeries
             {
-                Position = AxisPosition.Bottom,
-                MajorGridlineStyle = LineStyle.Solid,
-                MinorGridlineStyle = LineStyle.None,
-                TicklineColor = OxyColors.White,
-                TextColor = OxyColors.White // Cor do texto
-            };
-            plotModel.Axes.Add(categoryAxis);
-
-            // Defina o eixo de valor (eixo Y)
-            var valueAxis = new LinearAxis
+                // Adicionar os dados da série
+                Slices =
+        {
+            // Adicionar a fatia para a renda fixa
+            new PieSlice("Renda Fixa", dados.RendaFixa)
             {
-                Position = AxisPosition.Left,
-                MajorGridlineStyle = LineStyle.Solid,
-                MinorGridlineStyle = LineStyle.None,
-                TicklineColor = OxyColors.White,
-                TextColor = OxyColors.White // Cor do texto
-            };
-            plotModel.Axes.Add(valueAxis);
-
-            // Calcula a porcentagem da renda fixa em relação ao total
-            double percentualRendaFixa = (dados.RendaFixa / (dados.RendaFixa + dados.RendaVariavel)) * 100;
-
-            // Calcula a porcentagem da renda variável em relação ao total
-            double percentualRendaVariavel = (dados.RendaVariavel / (dados.RendaFixa + dados.RendaVariavel)) * 100;
-
-            // Adicione os dados das colunas
-            var columnData = new List<ColumnData>
+                // Definir a cor da fatia
+                Fill = OxyColor.FromRgb(201, 160, 80)
+            },
+            // Adicionar a fatia para a renda variável
+            new PieSlice("Renda Variável", dados.RendaVariavel)
             {
-                new ColumnData { Category = "Fixa", Value = percentualRendaFixa },
-                new ColumnData { Category = "Variavel", Value = percentualRendaVariavel },
-            };
-
-            // Espaço entre as colunas
-            double espacoEntreColunas = 0.2;
-
-            // Adicione as barras manualmente
-            for (int i = 0; i < columnData.Count; i++)
-            {
-                var series = new RectangleBarSeries
-                {
-                    Items = { new RectangleBarItem(i + espacoEntreColunas / 2, 0, i + 1 - espacoEntreColunas / 2, columnData[i].Value) },
-                    FillColor = OxyColor.FromRgb(201, 160, 80) // Cor da coluna
-                };
-                plotModel.Series.Add(series);
-                categoryAxis.Labels.Add(columnData[i].Category);
+                // Definir a cor da fatia
+                Fill = OxyColor.FromRgb(161, 130, 67)
             }
+        },
+                // Definir a espessura do traçado
+                StrokeThickness = 2.0,
+                // Definir o ângulo de partida
+                StartAngle = 0,
+                // Definir o ângulo de extensão
+                AngleSpan = 360
+            };
 
-            // Defina a cor das linhas do gráfico para branco
-            plotModel.DefaultColors = new List<OxyColor> { OxyColors.White };
+            // Adicionar a série ao modelo do gráfico
+            plotModel.Series.Add(series);
 
-            // Crie o visualizador do OxyPlot
-            var plotView = new OxyPlot.WindowsForms.PlotView
+            // Criar o visualizador do OxyPlot
+            var plotView = new PlotView
             {
                 Model = plotModel,
                 Width = 400,
                 Height = 300,
-                Location = new System.Drawing.Point(10, 10) // Posicione o gráfico à esquerda do formulário
+                Location = new System.Drawing.Point(10, 20) // Posicionar o gráfico no formulário
             };
+            plotView.Left = 30; // mover gráfico pra direita em 30 pixels 
 
-            // Adicione o visualizador ao formulário
+            // Adicionar o visualizador ao formulário
             Controls.Add(plotView);
-
         }
+
 
         // Classe para representar os dados das colunas
         private class ColumnData
@@ -302,19 +319,21 @@ namespace lion_finance_app
             Panel panel1 = new Panel();
             Panel panel2 = new Panel();
 
-            // Definindo um tom de dourado mais suave
-            System.Drawing.Color douradoSuave = System.Drawing.Color.FromArgb(201, 160, 80);
+            // Definindo um tom de dourado mais suave para Entradas
+            System.Drawing.Color douradoSuaveEntradas = System.Drawing.Color.FromArgb(201, 160, 80);
+            // Definindo um tom mais escuro para Despesas
+            System.Drawing.Color marromEscuroDespesas = System.Drawing.Color.FromArgb(161, 130, 67);
 
             // Definindo propriedades dos painéis
-            panel1.BackColor = douradoSuave;
+            panel1.BackColor = douradoSuaveEntradas; // Cor para Entradas
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Size = new System.Drawing.Size(200, 150); // Aumentando o tamanho do primeiro painel
+            panel1.Size = new System.Drawing.Size(180, 120); // Reduzindo o tamanho do primeiro painel
             panel1.Location = new System.Drawing.Point(50, this.ClientSize.Height - panel1.Height - 100); // Ajustando a posição do primeiro painel
 
-            panel2.BackColor = douradoSuave;
+            panel2.BackColor = marromEscuroDespesas; // Cor para Despesas
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Size = new System.Drawing.Size(200, 150); // Aumentando o tamanho do segundo painel
-            panel2.Location = new System.Drawing.Point(panel1.Right + 50, this.ClientSize.Height - panel2.Height - 100); // Ajustando a posição do segundo painel
+            panel2.Size = new System.Drawing.Size(180, 120); // Reduzindo o tamanho do segundo painel
+            panel2.Location = new System.Drawing.Point(panel1.Right + 30, this.ClientSize.Height - panel2.Height - 100); // Ajustando a posição do segundo painel
 
             // Adicionando títulos aos painéis
             Label label1 = new Label();
@@ -334,7 +353,7 @@ namespace lion_finance_app
             label2.AutoSize = true; // Permitindo que o tamanho do título seja ajustado automaticamente
 
             double entradas = dados.RendaVariavel + dados.RendaFixa;
-            double despesas = dados.Despesas.Aluguel 
+            double despesas = dados.Despesas.Aluguel
                 + dados.Despesas.Parcelamento
                 + dados.Despesas.Lazer
                 + dados.Despesas.Compras
@@ -368,5 +387,6 @@ namespace lion_finance_app
             this.Controls.Add(label1);
             this.Controls.Add(label2);
         }
+
     }
 }
